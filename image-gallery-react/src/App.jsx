@@ -24,19 +24,11 @@ function App() {
       <div className="Header w-full m-10">
       <h2 className="w-full font-bold text-xl">Photographer's Showcase</h2>
       </div>
-      <div className="modal-container h-40 w-40">
-            <div>
-                <button>
-                <span class="material-icons">cancel</span>
-                </button>
-            </div>
-            <img src={photoGalleryArrayItem.download_url}/>
-        </div>
-      <div className="grid grid-cols-3 gap-10 ml-40">
+      <div className="grid grid-cols-3 gap-10 ml-36">
         {
           photoGalleryArray.map((photoGalleryArrayItem, index) => {
             return (
-              <div key={index} className="border-2 border-gray-300 h-56 w-72 shadow-lg rounded-b-lg" onClick={() => getImg(photoGalleryArrayItem.download_url)}>
+              <div key={index} className="border-2 border-gray-300 h-56 w-72 shadow-lg rounded-b-lg md:flex flex-col" onClick={() => getImg(photoGalleryArrayItem.download_url)}>
                 <img src={photoGalleryArrayItem.download_url}
                   alt={`image_${photoGalleryArrayItem.id}`}
                   className="h-48 w-72"/>
